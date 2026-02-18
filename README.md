@@ -73,17 +73,6 @@ ioc-collector --github-feed-url https://raw.githubusercontent.com/user/repo/main
 ioc-collector --add-feed MyFeed https://example.com/feed.txt
 ```
 
-### Zenginleştirme (Enrichment)
-
-VirusTotal entegrasyonu için API anahtarı gereklidir:
-
-```bash
-export VT_API_KEY="your_api_key_here"
-
-# IOC'ları çıkar ve VirusTotal ile zenginleştir
-ioc-collector -f suspicious.txt --enrich --enrich-max 5
-```
-
 ### Gelişmiş Ağ Ayarları
 
 ```bash
