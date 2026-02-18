@@ -51,7 +51,7 @@ ioc-collector -u https://example.com/malware-analysis --export-md report.md
 cat logs.txt | ioc-collector -f - --format text
 ```
 
-### Feed Kullanımı (YENİ)
+### Feed Kullanımı 
 
 ```bash
 # Mevcut tüm feed'leri listele
