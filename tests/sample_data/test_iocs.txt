@@ -1,0 +1,31 @@
+=== Test IOC Data ===
+
+Normal formatlar:
+IP: 188.190.10.10
+IP: 8.8.8.8, 1.1.1.1
+IPv6: 2001:0db8:85a3:0000:0000:8a2e:0370:7334
+Domain: evil.com, malware.example.org
+URL: http://evil.com/malware.exe
+URL: https://c2server.net/beacon?id=123
+Email: attacker@evil.com
+MD5: d41d8cd98f00b204e9800998ecf8427e
+SHA1: da39a3ee5e6b4b0d3255bfef95601890afd80709
+SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+CVE: CVE-2024-12345, CVE-2023-9999
+MITRE: T1071.001, T1059, S0001
+
+Defanged formatlar:
+IP: 8[.]8[.]8[.]8
+Domain: evil[.]com, malware(.)example(.)org
+URL: hxxp://evil[.]com/malware.exe
+Email: attacker[@]evil[.]com, attacker[at]evil[dot]com
+
+False positive kontrollü:
+Version: 1.2.3.4 (bu bir IP olabilir ama geçerli)
+Filename: report_2024.txt (domain olmamalı)
+Extension: malware.exe (domain olmamalı)
+Python.3 is the latest (domain olmamalı)
+
+İnvalid IP test:
+999.999.999.999 should not be detected as IP
+256.1.2.3 should not be detected either
