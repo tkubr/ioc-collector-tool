@@ -1,14 +1,11 @@
 <p align="center">
-  <h1 align="center">🔍 IOC Collector</h1>
+  <h1 align="center"> IOC Collector</h1>
   <p align="center">
     <strong>Kapsamlı Tehdit İstihbaratı IOC Toplama ve Zenginleştirme Aracı</strong>
   </p>
   <p align="center">
     <img src="https://img.shields.io/badge/Python-3.9%2B-3776AB?logo=python&logoColor=white" alt="Python">
-    <img src="https://img.shields.io/badge/Tests-224%20Passing-brightgreen?logo=pytest" alt="Tests">
-    <img src="https://img.shields.io/badge/License-MIT-blue" alt="License">
     <img src="https://img.shields.io/badge/Version-1.2.0-orange" alt="Version">
-    <img src="https://img.shields.io/badge/Feeds-31%20Kaynak-red?logo=rss" alt="Feeds">
   </p>
 </p>
 
@@ -16,7 +13,7 @@
 
 **IOC Collector**, CTI (Cyber Threat Intelligence) analistleri ve SOC ekipleri için geliştirilmiş, **31 farklı tehdit istihbaratı kaynağından** IOC (Indicator of Compromise) verilerini toplayan, doğrulayan ve **5 farklı API** ile zenginleştiren gelişmiş bir komut satırı aracıdır.
 
-## 📋 İçindekiler
+## İçindekiler
 
 - [Özellikler](#-özellikler)
 - [Mimari](#-mimari)
@@ -33,7 +30,7 @@
 - [Konfigürasyon](#️-konfigürasyon)
 
 
-## ✨ Özellikler
+## Özellikler
 
 ### IOC Extraction
 | IOC Türü | Örnekler |
@@ -47,23 +44,23 @@
 | **MITRE ATT&CK** | `T1059.001`, `TA0001` |
 
 ### Akıllı İşleme
-- 🔄 **Defang/Refang** — `hxxps://evil[.]com` ↔ `https://evil.com`
-- 🧹 **Deduplikasyon** — Tekrar eden IOC'leri otomatik kaldırma
-- ✅ **Doğrulama** — Geçersiz IP, private range, TLD kontrolü
-- 🔗 **Hash Çakışma Önleme** — SHA256 içindeki MD5 false positive'lerini filtreler
+-  **Defang/Refang** — `hxxps://evil[.]com` ↔ `https://evil.com`
+-  **Deduplikasyon** — Tekrar eden IOC'leri otomatik kaldırma
+-  **Doğrulama** — Geçersiz IP, private range, TLD kontrolü
+-  **Hash Çakışma Önleme** — SHA256 içindeki MD5 false positive'lerini filtreler
 
-### 31 Entegre Kaynak
-- 🏛️ **6 CERT Feed** — TR, US, EU, NL, FR, JP
-- 🦠 **5 abuse.ch Feed** — URLhaus, MalBazaar, ThreatFox, Feodo, SSL BL
-- 🚫 **5 IP Blocklist** — Blocklist.de, Emerging Threats, Spamhaus, Cinsscore, Talos
-- 🎣 **4 Phishing/C2 Feed** — OpenPhish, PhishTank, Bambenek, CyberCrime Tracker
-- 📦 **7 GitHub IOC Repo** — Maltrail, MISP, Firehol, YARAify, ThreatHunter, ESET APT, Malpedia
-- 🔬 **5 Enrichment API** — VirusTotal, OTX AlienVault, AbuseIPDB, Shodan, GreyNoise
+###  Entegre Kaynaklar
+-  **6 CERT Feed** — TR, US, EU, NL, FR, JP
+-  **5 abuse.ch Feed** — URLhaus, MalBazaar, ThreatFox, Feodo, SSL BL
+-  **5 IP Blocklist** — Blocklist.de, Emerging Threats, Spamhaus, Cinsscore, Talos
+-  **4 Phishing/C2 Feed** — OpenPhish, PhishTank, Bambenek, CyberCrime Tracker
+-  **7 GitHub IOC Repo** — Maltrail, MISP, Firehol, YARAify, ThreatHunter, ESET APT, Malpedia
+-  **5 Enrichment API** — VirusTotal, OTX AlienVault, AbuseIPDB, Shodan, GreyNoise
 
 ### Çıktı Formatları
 `JSON` · `CSV` · `Markdown` · `Plain Text` · `STIX 2.1`
 
-## 🏗 Mimari
+##  Mimari
 
 ```
 ioc_collector/
@@ -96,7 +93,7 @@ ioc_collector/
     └── validator.py            # IP/domain doğrulama
 ```
 
-## 🚀 Kurulum
+##  Kurulum
 
 ### Gereksinimler
 - Python **3.9+**
@@ -114,7 +111,7 @@ pip install -r requirements.txt
 pip install .
 ```
 
-## 💡 Kullanım
+##  Kullanım
 
 ### Temel Komutlar
 
@@ -281,11 +278,11 @@ ioc-collector -f report.txt --enrich --enrich-otx --enrich-abuseipdb --enrich-ma
 
 | API | Env Variable | Ücretsiz | İçerik |
 |---|---|---|---|
-| **VirusTotal** | `VT_API_KEY` | ✅ (günlük limit) | IP, Domain, Hash reputation |
-| **OTX AlienVault** | `OTX_API_KEY` | ✅ | Pulse IOC, IP, Domain, Hash |
-| **AbuseIPDB** | `ABUSEIPDB_API_KEY` | ✅ (1000/gün) | IP abuse score, ISP, ülke |
-| **Shodan** | `SHODAN_API_KEY` | ✅ (kısıtlı) | Açık portlar, OS, CVE'ler |
-| **GreyNoise** | `GREYNOISE_API_KEY` | ✅ (community) | IP noise/riot sınıflandırma |
+| **VirusTotal** | `VT_API_KEY` | (günlük limit) | IP, Domain, Hash reputation |
+| **OTX AlienVault** | `OTX_API_KEY` | | Pulse IOC, IP, Domain, Hash |
+| **AbuseIPDB** | `ABUSEIPDB_API_KEY` | (1000/gün) | IP abuse score, ISP, ülke |
+| **Shodan** | `SHODAN_API_KEY` | (kısıtlı) | Açık portlar, OS, CVE'ler |
+| **GreyNoise** | `GREYNOISE_API_KEY` | (community) | IP noise/riot sınıflandırma |
 
 ### Gelişmiş Ayarlar
 
@@ -303,37 +300,37 @@ ioc-collector -f report.txt --tlp TLP:AMBER --confidence High --source-label "SO
 ioc-collector -f report.txt -v
 ```
 
-## 📊 Desteklenen Kaynaklar
+##  Desteklenen Kaynaklar
 
 ### Entegre Feed Tablosu
 
 <table>
 <tr><th>Kategori</th><th>Kaynak</th><th>Format</th><th>CLI Argümanı</th></tr>
-<tr><td rowspan="6"><b>🏛️ CERT</b></td>
+<tr><td rowspan="6"><b> CERT</b></td>
   <td>USOM (TR)</td><td>HTML</td><td rowspan="6"><code>--cert-feed</code></td></tr>
   <tr><td>CISA KEV (US)</td><td>JSON</td></tr>
   <tr><td>CERT-EU</td><td>JSON/RSS</td></tr>
   <tr><td>NCSC-NL</td><td>RSS</td></tr>
   <tr><td>CERT-FR</td><td>RSS</td></tr>
   <tr><td>JPCERT</td><td>RDF</td></tr>
-<tr><td rowspan="5"><b>🦠 abuse.ch</b></td>
+<tr><td rowspan="5"><b> abuse.ch</b></td>
   <td>URLhaus</td><td>CSV</td><td rowspan="5"><code>--abuse-feed</code></td></tr>
   <tr><td>MalBazaar</td><td>CSV</td></tr>
   <tr><td>ThreatFox</td><td>CSV</td></tr>
   <tr><td>Feodo Tracker</td><td>Text</td></tr>
   <tr><td>SSL Blacklist</td><td>CSV</td></tr>
-<tr><td rowspan="5"><b>🚫 IP Blocklist</b></td>
+<tr><td rowspan="5"><b> IP Blocklist</b></td>
   <td>Blocklist.de</td><td>Text</td><td rowspan="5"><code>--ip-blocklist</code></td></tr>
   <tr><td>Emerging Threats</td><td>Text</td></tr>
   <tr><td>Spamhaus DROP</td><td>Text</td></tr>
   <tr><td>Cinsscore</td><td>Text</td></tr>
   <tr><td>Talos Intelligence</td><td>Text</td></tr>
-<tr><td rowspan="4"><b>🎣 Phishing/C2</b></td>
+<tr><td rowspan="4"><b> Phishing/C2</b></td>
   <td>OpenPhish</td><td>Text</td><td rowspan="4"><code>--phishing-feed</code></td></tr>
   <tr><td>PhishTank</td><td>CSV</td></tr>
   <tr><td>Bambenek C2</td><td>Text</td></tr>
   <tr><td>CyberCrime Tracker</td><td>Text</td></tr>
-<tr><td rowspan="7"><b>📦 GitHub</b></td>
+<tr><td rowspan="7"><b> GitHub</b></td>
   <td>Maltrail</td><td>Text</td><td rowspan="7"><code>--github-feed-preset</code></td></tr>
   <tr><td>MISP Warning Lists</td><td>JSON</td></tr>
   <tr><td>Firehol IP Lists</td><td>Text</td></tr>
@@ -343,7 +340,7 @@ ioc-collector -f report.txt -v
   <tr><td>Malpedia</td><td>Text</td></tr>
 </table>
 
-## 📤 Çıktı Formatları
+##  Çıktı Formatları
 
 | Format | Dosya | Kullanım |
 |---|---|---|
@@ -355,7 +352,7 @@ ioc-collector -f report.txt -v
 
 Stdout formatı: `--format {json,csv,text,stix}`
 
-## 📁 Proje Yapısı
+##  Proje Yapısı
 
 ```
 IOC-Collector/
@@ -371,7 +368,7 @@ IOC-Collector/
 └── README.md
 ```
 
-## 🧪 Testler
+##  Testler
 
 Proje **224 birim test** ile kapsamlı şekilde test edilmiştir:
 
@@ -387,14 +384,14 @@ pytest tests/ -v
 ```
 
 Test kapsamı:
-- ✅ Regex extraction (IPv4, IPv6, URL, Domain, Hash, CVE, MITRE)
-- ✅ Feed parsing (CSV, JSON, RSS, RDF, Text)
-- ✅ Enrichment API mock testleri (VirusTotal, OTX, AbuseIPDB, Shodan, GreyNoise)
-- ✅ CLI argüman doğrulama
-- ✅ Çıktı format testleri (CSV, Markdown, STIX)
-- ✅ Defang/refang işlemleri
+-  Regex extraction (IPv4, IPv6, URL, Domain, Hash, CVE, MITRE)
+-  Feed parsing (CSV, JSON, RSS, RDF, Text)
+-  Enrichment API mock testleri (VirusTotal, OTX, AbuseIPDB, Shodan, GreyNoise)
+-  CLI argüman doğrulama
+-  Çıktı format testleri (CSV, Markdown, STIX)
+-  Defang/refang işlemleri
 
-## ⚙️ Konfigürasyon
+## Konfigürasyon
 
 ### Feed Yönetimi
 
@@ -416,7 +413,3 @@ export GREYNOISE_API_KEY="your_greynoise_api_key"
 > **Not:** API anahtarları opsiyoneldir. Anahtar set edilmemişse ilgili enrichment otomatik olarak atlanır.
 
 ---
-
-<p align="center">
-  <sub>Developed with ❤️ for the CTI community</sub>
-</p>
