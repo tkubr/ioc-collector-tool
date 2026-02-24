@@ -4,10 +4,7 @@
     <strong>Kapsamlı Tehdit İstihbaratı IOC Toplama ve Zenginleştirme Aracı</strong>
   </p>
   <p align="center">
-    <img src="https://img.shields.io/badge/Python-3.9%2B-3776AB?logo=python&logoColor=white" alt="Python">
-    <img src="https://img.shields.io/badge/Version-1.2.0-orange" alt="Version">
   </p>
-</p>
 
 ---
 
