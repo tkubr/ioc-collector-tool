@@ -5,7 +5,7 @@
   </p>
   <p align="center">
   </p>
-
+  
 ---
 
 **IOC Collector**, CTI (Cyber Threat Intelligence) analistleri ve SOC ekipleri için geliştirilmiş, **31 farklı tehdit istihbaratı kaynağından** IOC (Indicator of Compromise) verilerini toplayan, doğrulayan ve **5 farklı API** ile zenginleştiren gelişmiş bir komut satırı aracıdır.
