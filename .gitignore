@@ -1,0 +1,30 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Üretilen çıktı dosyaları
+*.csv
+output/
+ioc_export.*
+
+# Proje dahili belgeleri (GitHub'a yüklenmeyecek)
+ioc_collector_teknik_rapor.md
+TODO.md
+feed.md
+report.md

@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "ioc-collector"
+version = "1.2.0"
+description = "Threat Intelligence IOC Extractor CLI Tool"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+
+dependencies = [
+    "requests>=2.28.0",
+    "tldextract>=5.0.0",
+]
+
+[project.scripts]
+ioc-collector = "ioc_collector.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["ioc_collector*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
